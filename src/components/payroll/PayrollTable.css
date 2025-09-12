@@ -1,0 +1,70 @@
+.payroll-table-container {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  overflow-x: auto;
+}
+
+.payroll-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0;
+}
+
+.payroll-table th,
+.payroll-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.payroll-table th {
+  background: #f8f9fa;
+  font-weight: 600;
+  color: #495057;
+  border-top: none;
+}
+
+.payroll-table tbody tr:hover {
+  background: #f8f9fa;
+}
+
+.positive {
+  color: #28a745;
+}
+
+.negative {
+  color: #dc3545;
+}
+
+.net-salary {
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.action-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.action-btn:hover {
+  background: #f8f9fa;
+}
+
+.process-btn {
+  color: #007bff;
+}
+
+.paid-btn {
+  color: #28a745;
+}

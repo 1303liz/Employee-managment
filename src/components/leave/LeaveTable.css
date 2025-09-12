@@ -1,0 +1,92 @@
+.leave-table-container {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  overflow-x: auto;
+}
+
+.leave-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0;
+}
+
+.leave-table th,
+.leave-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.leave-table th {
+  background: #f8f9fa;
+  font-weight: 600;
+  color: #495057;
+  border-top: none;
+}
+
+.leave-table tbody tr:hover {
+  background: #f8f9fa;
+}
+
+.type-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  background: #e9ecef;
+  color: #495057;
+}
+
+.type-badge.vacation {
+  background: #cce7ff;
+  color: #004085;
+}
+
+.type-badge.sick {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.type-badge.personal {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.type-badge.emergency {
+  background: #f5c6cb;
+  color: #721c24;
+}
+
+.reason-cell {
+  max-width: 200px;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.action-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.action-btn:hover {
+  background: #f8f9fa;
+}
+
+.approve-btn {
+  color: #28a745;
+}
+
+.reject-btn {
+  color: #dc3545;
+}

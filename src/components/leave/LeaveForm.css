@@ -1,0 +1,15 @@
+.leave-form {
+  padding: 2rem;
+}
+
+.leave-form .form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .leave-form .form-row {
+    grid-template-columns: 1fr;
+  }
+}

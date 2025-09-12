@@ -1,0 +1,219 @@
+.stats-overview {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+}
+
+.stats-section {
+  background: linear-gradient(145deg, #ffffff, #f8f9fa);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 
+    0 15px 35px rgba(0,0,0,0.08),
+    0 5px 15px rgba(0,0,0,0.05);
+  border: 1px solid rgba(255,255,255,0.8);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.stats-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  transition: height 0.3s ease;
+}
+
+.stats-section:hover {
+  transform: translateY(-3px);
+  box-shadow: 
+    0 20px 45px rgba(0,0,0,0.12),
+    0 8px 20px rgba(0,0,0,0.08);
+}
+
+.stats-section:hover::before {
+  height: 6px;
+}
+
+.stats-section h3 {
+  margin-bottom: 2rem;
+  color: #2c3e50;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-align: center;
+  background: linear-gradient(135deg, #2c3e50, #4a5568);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+}
+
+.stats-section h3::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 3px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  border-radius: 2px;
+}
+
+.activity-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.activity-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.activity-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  transition: width 0.3s ease;
+}
+
+.activity-item:hover {
+  background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+  transform: translateX(5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.activity-item:hover::before {
+  width: 6px;
+}
+
+.activity-icon {
+  font-size: 1.5rem;
+  margin-top: 0.1rem;
+  padding: 0.75rem;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.2), rgba(118, 75, 162, 0.2));
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.activity-item:hover .activity-icon {
+  transform: scale(1.1) rotate(5deg);
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.3), rgba(118, 75, 162, 0.3));
+}
+
+.activity-content {
+  flex: 1;
+}
+
+.activity-content p {
+  margin: 0 0 0.75rem 0;
+  color: #495057;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.activity-time {
+  font-size: 0.85rem;
+  color: #6c757d;
+  font-weight: 400;
+  background: rgba(108, 117, 125, 0.1);
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+.department-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.dept-stat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.dept-stat::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.1), transparent);
+  transition: all 0.6s ease;
+}
+
+.dept-stat:hover {
+  background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+  transform: scale(1.02);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.dept-stat:hover::before {
+  left: 100%;
+}
+
+.dept-name {
+  font-weight: 600;
+  color: #495057;
+  font-size: 1.05rem;
+}
+
+.dept-count {
+  font-size: 0.95rem;
+  color: #6c757d;
+  background: linear-gradient(135deg, #ffffff, #f8f9fa);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  border: 2px solid rgba(102, 126, 234, 0.2);
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.dept-stat:hover .dept-count {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  transform: scale(1.05);
+}
+
+@media (max-width: 968px) {
+  .stats-overview {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .stats-section {
+    padding: 1rem;
+  }
+  
+  .activity-item {
+    padding: 0.75rem;
+  }
+}

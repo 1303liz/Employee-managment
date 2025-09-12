@@ -1,0 +1,20 @@
+.employee-form {
+  padding: 2rem;
+}
+
+.employee-form .form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.employee-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .employee-form .form-row {
+    grid-template-columns: 1fr;
+  }
+}

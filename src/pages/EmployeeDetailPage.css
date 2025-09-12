@@ -1,0 +1,5 @@
+/* Additional page-specific styles */
+.employee-detail-page {
+  max-width: 1200px;
+  margin: 0 auto;
+}

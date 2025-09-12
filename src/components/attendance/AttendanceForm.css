@@ -1,0 +1,125 @@
+.attendance-form {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  margin-bottom: 2rem;
+}
+
+.attendance-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.attendance-header h2 {
+  color: #2c3e50;
+  margin: 0;
+}
+
+.current-time {
+  font-size: 1.1rem;
+  color: #667eea;
+  font-weight: 500;
+}
+
+.attendance-status {
+  margin-bottom: 2rem;
+}
+
+.status-info {
+  display: flex;
+  gap: 2rem;
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.status-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.status-item label {
+  font-weight: 500;
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+.status-item .time {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #495057;
+}
+
+.no-attendance {
+  text-align: center;
+  padding: 2rem;
+  color: #6c757d;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.attendance-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.attendance-btn {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 150px;
+}
+
+.check-in {
+  background: #28a745;
+  color: white;
+}
+
+.check-in:hover:not(.disabled) {
+  background: #218838;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+}
+
+.check-out {
+  background: #dc3545;
+  color: white;
+}
+
+.check-out:hover:not(.disabled) {
+  background: #c82333;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(220, 53, 69, 0.3);
+}
+
+.attendance-btn.disabled {
+  background: #6c757d;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+  .attendance-header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  .status-info {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .attendance-actions {
+    flex-direction: column;
+  }
+}
