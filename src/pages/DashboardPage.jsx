@@ -52,8 +52,7 @@ const DashboardPage = () => {
         navigate('/payroll')
         break
       case 'profile':
-        // For now, just navigate to dashboard
-        navigate('/dashboard')
+        navigate('/profile')
         break
       default:
         break
@@ -88,7 +87,7 @@ const DashboardPage = () => {
           /* Employee Dashboard */
           <div className="employee-dashboard">
             <div className="employee-cards">
-              <div className="dashboard-card" onClick={() => handleNavigation('/dashboard')}>
+              <div className="dashboard-card" onClick={() => handleNavigation('/profile')}>
                 <div className="card-icon">👤</div>
                 <div className="card-content">
                   <h3>My Profile</h3>

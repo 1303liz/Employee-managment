@@ -42,6 +42,12 @@ const Sidebar = () => {
       label: 'Payroll',
       icon: '💰',
       roles: ['admin', 'employee']
+    },
+    {
+      path: '/profile',
+      label: 'My Profile',
+      icon: '👤',
+      roles: ['admin', 'manager', 'employee']
     }
   ]
 

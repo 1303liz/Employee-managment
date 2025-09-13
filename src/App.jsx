@@ -12,6 +12,7 @@ import DepartmentPage from './pages/DepartmentPage'
 import AttendancePage from './pages/AttendancePage'
 import LeavePage from './pages/LeavePage'
 import PayrollPage from './pages/PayrollPage'
+import MemberProfilePage from './pages/MemberProfilePage'
 import './App.css'
 
 function App() {
@@ -71,6 +72,13 @@ function App() {
               <ProtectedRoute>
                 <AppLayout>
                   <PayrollPage />
+                </AppLayout>
+              </ProtectedRoute>
+            } />
+            <Route path="/profile" element={
+              <ProtectedRoute>
+                <AppLayout>
+                  <MemberProfilePage />
                 </AppLayout>
               </ProtectedRoute>
             } />
