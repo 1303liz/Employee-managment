@@ -1,20 +1,119 @@
-.employee-form {
-  padding: 2rem;
+/* Modern Employee Form Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: var(--z-modal);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  padding: var(--spacing-4);
 }
 
-.employee-form .form-row {
+.modal {
+  background: var(--color-surface);
+  border-radius: var(--radius-2xl);
+  max-width: 700px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: var(--shadow-2xl);
+  border: 1px solid var(--color-border);
+}
+
+.form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
+  gap: var(--spacing-4);
 }
 
-.employee-form .form-group {
-  margin-bottom: 1.5rem;
+.form-control.error {
+  border-color: var(--color-error-500);
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
 }
 
+.close-btn {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+}
+
+/* Form Validation Styles */
+.form-control:valid {
+  border-color: var(--color-success-300);
+}
+
+.form-control:invalid:not(:placeholder-shown) {
+  border-color: var(--color-error-300);
+}
+
+/* Enhanced Focus States */
+.form-control:focus {
+  outline: none;
+  border-color: var(--color-primary-500);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  transform: translateY(-1px);
+}
+
+/* Select Styling */
+.form-control select {
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 12px center;
+  background-repeat: no-repeat;
+  background-size: 16px;
+  appearance: none;
+}
+
+/* Loading State */
+.form-loading {
+  position: relative;
+  overflow: hidden;
+}
+
+.form-loading::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-  .employee-form .form-row {
+  .modal {
+    margin: var(--spacing-4);
+    max-height: calc(100vh - 2rem);
+  }
+  
+  .form-row {
     grid-template-columns: 1fr;
+    gap: var(--spacing-3);
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-overlay {
+    padding: var(--spacing-2);
+  }
+  
+  .modal {
+    margin: 0;
+    border-radius: var(--radius-xl);
   }
 }
